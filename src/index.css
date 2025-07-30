@@ -8,35 +8,41 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* CVDC 2025 Design System */
+    --background: 45 85% 85%; /* Golden light #F6E0A4 */
+    --foreground: 0 0% 0%; /* Black #000000 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 354 83% 46%; /* Red #D11F2A */
+    --primary-foreground: 0 0% 100%; /* White text */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 100%; /* White */
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 85% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 85% 85%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 354 83% 46%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 60% 80%;
+    --input: 0 0% 100%;
+    --ring: 354 83% 46%;
 
-    --radius: 0.5rem;
+    --radius: 1rem; /* XL rounded borders */
+    
+    /* Custom CVDC variables */
+    --golden-bg: 45 85% 85%;
+    --cvdc-red: 354 83% 46%;
+    --footer-dark: 0 0% 10%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +106,24 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .cvdc-hero-btn {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl px-8 py-4 text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .cvdc-card {
+    @apply bg-card text-card-foreground rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .cvdc-section-title {
+    @apply text-2xl md:text-3xl font-bold text-foreground mb-8;
   }
 }
