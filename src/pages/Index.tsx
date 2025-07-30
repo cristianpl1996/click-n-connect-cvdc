@@ -129,12 +129,16 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center px-4 py-12">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
-            🎓 Sala de la Industria – CVDC 2025
+            🎓 La Industria Veterinaria te Invita a Aprender, Conectar y Disfrutar
           </h1>
           <div className="text-lg md:text-xl text-foreground mb-12 space-y-3 max-w-3xl mx-auto">
-            <p>Inscríbete gratis a las charlas más relevantes del Congreso Veterinario de Colombia.</p>
-            <p>🐾 Medicina interna, nutrición, comportamiento, innovación y más.</p>
-            <p className="font-semibold">👉 ¡Cupos limitados!</p>
+            <p>Durante tres días, las marcas líderes del sector compartirán lo último en salud animal, nutrición, innovación clínica y casos reales.</p>
+            <div className="mt-6 space-y-2">
+              <p>🎁 Suvenires exclusivos para los asistentes</p>
+              <p>🥤 Refrigerios incluidos</p>
+              <p>📚 Charlas técnicas de alto nivel</p>
+            </div>
+            <p className="font-semibold mt-6">🛑 ¡Cupos limitados! Regístrate y asegura tu lugar.</p>
           </div>
           <Button 
             className="cvdc-hero-btn text-xl px-12 py-6"
